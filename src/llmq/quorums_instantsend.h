@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_QUORUMS_INSTANTSEND_H
-#define DASH_QUORUMS_INSTANTSEND_H
+#ifndef KASH_QUORUMS_INSTANTSEND_H
+#define KASH_QUORUMS_INSTANTSEND_H
 
 #include "quorums_signing.h"
 
@@ -178,4 +178,4 @@ bool IsInstantSendEnabled();
 
 }
 
-#endif//DASH_QUORUMS_INSTANTSEND_H
+#endif//KASH_QUORUMS_INSTANTSEND_H

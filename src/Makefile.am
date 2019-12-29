@@ -50,23 +50,23 @@ BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
 BLS_LIBS=-lchiabls -lgmp
 
-LIBBITCOIN_SERVER=libdash_server.a
-LIBBITCOIN_COMMON=libdash_common.a
-LIBBITCOIN_CONSENSUS=libdash_consensus.a
-LIBBITCOIN_CLI=libdash_cli.a
-LIBBITCOIN_UTIL=libdash_util.a
-LIBBITCOIN_CRYPTO=crypto/libdash_crypto.a
-LIBBITCOINQT=qt/libdashqt.a
+LIBBITCOIN_SERVER=libkash_server.a
+LIBBITCOIN_COMMON=libkash_common.a
+LIBBITCOIN_CONSENSUS=libkash_consensus.a
+LIBBITCOIN_CLI=libkash_cli.a
+LIBBITCOIN_UTIL=libkash_util.a
+LIBBITCOIN_CRYPTO=crypto/libkash_crypto.a
+LIBBITCOINQT=qt/libkashqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libdash_zmq.a
+LIBBITCOIN_ZMQ=libkash_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libdashconsensus.la
+LIBBITCOINCONSENSUS=libkashconsensus.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libdash_wallet.a
+LIBBITCOIN_WALLET=libkash_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -91,15 +91,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += dashd
+  bin_PROGRAMS += kashd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += dash-cli dash-tx
+  bin_PROGRAMS += kash-cli kash-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# dash core #
+# kash core #
 BITCOIN_CORE_H = \
   addrdb.h \
   activemasternode.h \
@@ -252,12 +252,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libdash_util_a-clientversion.$(OBJEXT): obj/build.h
+libkash_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between dashd and dash-qt
-libdash_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libdash_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_server_a_SOURCES = \
+# server: shared between kashd and kash-qt
+libkash_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libkash_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_server_a_SOURCES = \
   activemasternode.cpp \
   addrman.cpp \
   addrdb.cpp \
@@ -341,20 +341,20 @@ libdash_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libdash_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libdash_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_zmq_a_SOURCES = \
+libkash_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libkash_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
 endif
 
 
-# wallet: shared between dashd and dash-qt, but only linked
+# wallet: shared between kashd and kash-qt, but only linked
 # when wallet enabled
-libdash_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdash_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_wallet_a_SOURCES = \
+libkash_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libkash_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_wallet_a_SOURCES = \
   keepass.cpp \
   privatesend-client.cpp \
   privatesend-util.cpp \
@@ -367,9 +367,9 @@ libdash_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libdash_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES) $(PIC_FLAGS)
-crypto_libdash_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
-crypto_libdash_crypto_a_SOURCES = \
+crypto_libkash_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES) $(PIC_FLAGS)
+crypto_libkash_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(PIC_FLAGS)
+crypto_libkash_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -388,7 +388,7 @@ crypto_libdash_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # x11
-crypto_libdash_crypto_a_SOURCES += \
+crypto_libkash_crypto_a_SOURCES += \
   crypto/blake.c \
   crypto/bmw.c \
   crypto/cubehash.c \
@@ -414,9 +414,9 @@ crypto_libdash_crypto_a_SOURCES += \
   crypto/sph_types.h
 
 # consensus: shared between all executables that validate any consensus rules.
-libdash_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdash_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_consensus_a_SOURCES = \
+libkash_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libkash_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -435,7 +435,7 @@ libdash_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/dashconsensus.cpp \
+  script/kashconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -451,10 +451,10 @@ libdash_consensus_a_SOURCES = \
   utilstrencodings.h \
   version.h
 
-# common: shared between dashd, and dash-qt and non-server tools
-libdash_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdash_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_common_a_SOURCES = \
+# common: shared between kashd, and kash-qt and non-server tools
+libkash_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libkash_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_common_a_SOURCES = \
   amount.cpp \
   base58.cpp \
   bip39.cpp \
@@ -479,9 +479,9 @@ libdash_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libdash_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdash_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_util_a_SOURCES = \
+libkash_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libkash_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_util_a_SOURCES = \
   bls/bls_batchverifier.h \
   bls/bls_ies.cpp \
   bls/bls_ies.h \
@@ -506,31 +506,31 @@ libdash_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libdash_util_a_SOURCES += compat/glibc_compat.cpp
+libkash_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += -Wl,--wrap=log2f -Wl,--wrap=__divmoddi4
 endif
 
-# cli: shared between dash-cli and dash-qt
-libdash_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdash_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdash_cli_a_SOURCES = \
+# cli: shared between kash-cli and kash-qt
+libkash_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libkash_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkash_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libdash_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libkash_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# dashd binary #
-dashd_SOURCES = dashd.cpp
-dashd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-dashd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-dashd_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# kashd binary #
+kashd_SOURCES = kashd.cpp
+kashd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+kashd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+kashd_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dashd_SOURCES += dashd-res.rc
+kashd_SOURCES += kashd-res.rc
 endif
 
-dashd_LDADD = \
+kashd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -543,37 +543,37 @@ dashd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-dashd_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
+kashd_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(BLS_LIBS)
 
-# dash-cli binary #
-dash_cli_SOURCES = dash-cli.cpp
-dash_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-dash_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-dash_cli_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# kash-cli binary #
+kash_cli_SOURCES = kash-cli.cpp
+kash_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+kash_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+kash_cli_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dash_cli_SOURCES += dash-cli-res.rc
+kash_cli_SOURCES += kash-cli-res.rc
 endif
 
-dash_cli_LDADD = \
+kash_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
-dash_cli_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
+kash_cli_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS) $(BLS_LIBS)
 #
 
-# dash-tx binary #
-dash_tx_SOURCES = dash-tx.cpp
-dash_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-dash_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-dash_tx_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# kash-tx binary #
+kash_tx_SOURCES = kash-tx.cpp
+kash_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+kash_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+kash_tx_LDFLAGS = $(LDFLAGS_WRAP_EXCEPTIONS) $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dash_tx_SOURCES += dash-tx-res.rc
+kash_tx_SOURCES += kash-tx-res.rc
 endif
 
-dash_tx_LDADD = \
+kash_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -581,22 +581,22 @@ dash_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-dash_tx_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(CRYPTO_LIBS) $(BLS_LIBS)
+kash_tx_LDADD += $(BACKTRACE_LIB) $(BOOST_LIBS) $(CRYPTO_LIBS) $(BLS_LIBS)
 #
 
-# dashconsensus library #
+# kashconsensus library #
 if BUILD_BITCOIN_LIBS
-include_HEADERS = script/dashconsensus.h
-libdashconsensus_la_SOURCES = $(crypto_libdash_crypto_a_SOURCES) $(libdash_consensus_a_SOURCES)
+include_HEADERS = script/kashconsensus.h
+libkashconsensus_la_SOURCES = $(crypto_libkash_crypto_a_SOURCES) $(libkash_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libdashconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libkashconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libdashconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libdashconsensus_la_LIBADD = $(LIBSECP256K1) $(BLS_LIBS)
-libdashconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libdashconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libkashconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libkashconsensus_la_LIBADD = $(LIBSECP256K1) $(BLS_LIBS)
+libkashconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libkashconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #
@@ -630,12 +630,12 @@ EXTRA_DIST = $(CTAES_DIST)
 EXTRA_DIST += $(IMMER_DIST)
 
 
-config/dash-config.h: config/stamp-h1
+config/kash-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/dash-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/kash-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/dash-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/dash-config.h.in
+$(top_srcdir)/$(subdir)/config/kash-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/kash-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean

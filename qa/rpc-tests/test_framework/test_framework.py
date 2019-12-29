@@ -120,11 +120,11 @@ class BitcoinTestFramework(object):
 
         parser = optparse.OptionParser(usage="%prog [options]")
         parser.add_option("--nocleanup", dest="nocleanup", default=False, action="store_true",
-                          help="Leave dashds and test.* datadir on exit or error")
+                          help="Leave kashds and test.* datadir on exit or error")
         parser.add_option("--noshutdown", dest="noshutdown", default=False, action="store_true",
-                          help="Don't stop dashds after the test execution")
+                          help="Don't stop kashds after the test execution")
         parser.add_option("--srcdir", dest="srcdir", default=os.path.normpath(os.path.dirname(os.path.realpath(__file__))+"/../../../src"),
-                          help="Source directory containing dashd/dash-cli (default: %default)")
+                          help="Source directory containing kashd/kash-cli (default: %default)")
         parser.add_option("--cachedir", dest="cachedir", default=os.path.normpath(os.path.dirname(os.path.realpath(__file__))+"/../../cache"),
                           help="Directory for caching pregenerated datadirs")
         parser.add_option("--tmpdir", dest="tmpdir", default=tempfile.mkdtemp(prefix="test"),
@@ -182,7 +182,7 @@ class BitcoinTestFramework(object):
                 success = False
                 self.log.exception("Unexpected exception caught during shutdown")
         else:
-            self.log.info("Note: dashds were not stopped and may still be running")
+            self.log.info("Note: kashds were not stopped and may still be running")
 
         if not self.options.nocleanup and not self.options.noshutdown and success:
             self.log.info("Cleaning up")
@@ -252,7 +252,7 @@ class MasternodeInfo:
         self.collateral_vout = collateral_vout
 
 
-class DashTestFramework(BitcoinTestFramework):
+class KashTestFramework(BitcoinTestFramework):
     def __init__(self, num_nodes, masterodes_count, extra_args=None, fast_dip3_enforcement=False):
         super().__init__()
         self.mn_count = masterodes_count
@@ -760,11 +760,11 @@ class ComparisonTestFramework(BitcoinTestFramework):
 
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("BITCOIND", "dashd"),
-                          help="dashd binary to test")
+                          default=os.getenv("BITCOIND", "kashd"),
+                          help="kashd binary to test")
         parser.add_option("--refbinary", dest="refbinary",
-                          default=os.getenv("BITCOIND", "dashd"),
-                          help="dashd binary to use for reference nodes (if any)")
+                          default=os.getenv("BITCOIND", "kashd"),
+                          help="kashd binary to use for reference nodes (if any)")
 
     def setup_network(self):
         self.nodes = start_nodes(
