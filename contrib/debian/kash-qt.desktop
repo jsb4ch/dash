@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Kash Core
+Comment=Kash P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Kash peer-to-peer Netzwerk
+Comment[fr]=Kash, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Kash, eşten eşe kriptografik sanal para birimi
+Exec=kash-qt %u
+Terminal=false
+Type=Application
+Icon=kash128
+MimeType=x-scheme-handler/kash;
+Categories=Office;Finance;

@@ -1,0 +1,9 @@
+find . -type f -print0 | xargs -0 sed -i 's/dash/kash/g'
+find . -type f -print0 | xargs -0 sed -i 's/Dash/Kash/g'
+find . -type f -print0 | xargs -0 sed -i 's/DASH/KASH/g'
+find . -exec rename 's/dash/kash/' {} ";"
+find . -exec rename 's/Dash/Kash/' {} ";"
+
+find . -type f -print0 | xargs -0 sed -i '/opyright/ s/Kash/Dash/' {} ";"
+sed -i 's/kash/dash/g' doc/release-notes/*
+sed -i 's/Kash/Dash/g' doc/release-notes/*

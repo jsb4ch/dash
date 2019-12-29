@@ -1,0 +1,6 @@
+usr/local/bin/kash-qt usr/bin
+share/pixmaps/kash32.xpm usr/share/pixmaps
+share/pixmaps/kash16.xpm usr/share/pixmaps
+share/pixmaps/kash128.png usr/share/pixmaps
+debian/kash-qt.desktop usr/share/applications
+debian/kash-qt.protocol usr/share/kde4/services/

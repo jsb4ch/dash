@@ -1,0 +1,33 @@
+# /etc/conf.d/kashd: config file for /etc/init.d/kashd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/kashcore/kash.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/kashd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/kashd.pid"
+
+# Where to write kashd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/kashd"
+
+# User and group to own kashd process
+#BITCOIND_USER="kashcore"
+#BITCOIND_GROUP="kashcore"
+
+# Path to kashd executable
+#BITCOIND_BIN="/usr/bin/kashd"
+
+# Nice value to run kashd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

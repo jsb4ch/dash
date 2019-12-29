@@ -1,0 +1,22 @@
+[Unit]
+Description=Kash's distributed currency daemon
+After=network.target
+
+[Service]
+User=kashcore
+Group=kashcore
+
+Type=forking
+PIDFile=/var/lib/kashd/kashd.pid
+ExecStart=/usr/bin/kashd -daemon -pid=/var/lib/kashd/kashd.pid \
+-conf=/etc/kashcore/kash.conf -datadir=/var/lib/kashd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
