@@ -74,7 +74,7 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     QString theme = GUIUtil::getThemeName();
     // load pixmap
     QPixmap appIconPixmap(":/icons/bitcoin");
-    QPixmap splashImagePixmap(":/images/" + theme + "/splash");
+    QPixmap splashImagePixmap(":/images/splash");
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
     {
