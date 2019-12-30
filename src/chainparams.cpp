@@ -305,7 +305,7 @@ public:
         vSeeds.push_back(CDNSSeedData("node9.kash.jsmex.io", "node9.kash.jsmex.io"));
         vSeeds.push_back(CDNSSeedData("node10.kash.jsmex.io", "node10.kash.jsmex.io"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,19);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,45);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,66);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,210);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0xa4)(0xa8)(0xa2)(0xaE).convert_to_container<std::vector<unsigned char> >();
@@ -335,7 +335,7 @@ public:
         nPoolMaxParticipants = 5;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
 
-       //  vSporkAddresses = {"Xgtyuk76vhuFW2iT7UAiHgNdWXCf3J34wh"};
+        vSporkAddresses = {"K8RpAk7UXyATKNWKTEPE9kXNiApcZH5Lg2"};
         nMinSporkKeys = 1;
         fBIP9CheckMasternodesUpgraded = true;
 
@@ -459,7 +459,7 @@ public:
         // vSeeds.push_back(CDNSSeedData("kashdot.io",  "testnet-seed.kashdot.io"));
         // vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,19);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,107);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,66);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,210);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0xb4)(0xb5)(0xb7)(0xbF).convert_to_container<std::vector<unsigned char> >();
@@ -487,7 +487,8 @@ public:
         nPoolMaxParticipants = 5;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        // vSporkAddresses = {"yjPtiKh2uwk3bDutTEA2q9mCtXyiZRWn55"};
+        vSporkAddresses = {"kJwShxwdVTBBkFqQF56PXS347hayj5PwPr"};
+
         nMinSporkKeys = 1;
         fBIP9CheckMasternodesUpgraded = true;
 
@@ -613,16 +614,11 @@ public:
         vSeeds.clear();
         //vSeeds.push_back(CDNSSeedData("kashevo.org",  "devnet-seed.kashevo.org"));
 
-        // Testnet Kash addresses start with 'y'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
-        // Testnet Kash script addresses start with '8' or '9'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
-        // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Testnet Kash BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Kash BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,107);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,66);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,210);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0xb4)(0xb5)(0xb7)(0xbF).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0xb4)(0xb5)(0xb3)(0xb4).convert_to_container<std::vector<unsigned char> >();
 
         // Testnet Kash BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
@@ -645,7 +641,7 @@ public:
         nPoolMaxParticipants = 5;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        // vSporkAddresses = {"yjPtiKh2uwk3bDutTEA2q9mCtXyiZRWn55"};
+        vSporkAddresses = {"kJwShxwdVTBBkFqQF56PXS347hayj5PwPr"};
         nMinSporkKeys = 1;
         // devnets are started with no blocks and no MN, so we can't check for upgraded MN (as there are none)
         fBIP9CheckMasternodesUpgraded = false;
@@ -769,7 +765,7 @@ public:
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
         // privKey: cP4EKFyJsHT39LDqgdcB43Y3YXjNyjb5Fuas1GQSeAtjnZWmZEQK
-        // vSporkAddresses = {"yj949n1UH6fDhw6HtVE5VMj2iSTaSWBMcW"};
+        vSporkAddresses = {"kJwShxwdVTBBkFqQF56PXS347hayj5PwPr"};
         nMinSporkKeys = 1;
         // regtest usually has no masternodes in most tests, so don't check for upgraged MNs
         fBIP9CheckMasternodesUpgraded = false;
@@ -785,16 +781,11 @@ public:
             0
         };
 
-        // Regtest Kash addresses start with 'y'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
-        // Regtest Kash script addresses start with '8' or '9'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,19);
-        // Regtest private keys start with '9' or 'c' (Bitcoin defaults)
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Regtest Kash BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Kash BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,107);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,66);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,210);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0xb4)(0xb5)(0xb7)(0xbF).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0xb4)(0xb5)(0xb3)(0xb4).convert_to_container<std::vector<unsigned char> >();
 
         // Regtest Kash BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
