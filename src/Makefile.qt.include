@@ -311,8 +311,8 @@ RES_IMAGES = \
   qt/res/images/drkblue_upArrow_small.png \
   qt/res/images/drkblue_qtreeview_selected.png \
   qt/res/images/drkblue_rightArrow_small.png \
-
   qt/res/images/drkblue_walletFrame_bg.png
+  
 RES_CSS = \
   qt/res/css/trad.css
 
