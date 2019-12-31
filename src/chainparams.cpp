@@ -291,18 +291,18 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000003a320fdbdb7bd7b0e101119d725e1c41fe70efab6560fa118b49f1d406f"));
         assert(genesis.hashMerkleRoot == uint256S("0xfe70f4a23756e0d7d598289a37583dd41e94d764d1bda4287423a80cdb5fa8f7"));
 
-        vSeeds.push_back(CDNSSeedData("kashseed.kash.jsmex.io", "kashseed.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node.kash.jsmex.io", "node.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node1.kash.jsmex.io", "node1.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node2.kash.jsmex.io", "node2.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node3.kash.jsmex.io", "node3.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node4.kash.jsmex.io", "node4.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node5.kash.jsmex.io", "node5.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node6.kash.jsmex.io", "node6.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node7.kash.jsmex.io", "node7.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node8.kash.jsmex.io", "node8.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node9.kash.jsmex.io", "node9.kash.jsmex.io"));
-        vSeeds.push_back(CDNSSeedData("node10.kash.jsmex.io", "node10.kash.jsmex.io"));
+        vSeeds.push_back(CDNSSeedData("kashseed.kaskcore.org", "kashseed.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node.kaskcore.org", "node.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node1.kaskcore.org", "node1.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node2.kaskcore.org", "node2.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node3.kaskcore.org", "node3.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node4.kaskcore.org", "node4.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node5.kaskcore.org", "node5.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node6.kaskcore.org", "node6.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node7.kaskcore.org", "node7.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node8.kaskcore.org", "node8.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node9.kaskcore.org", "node9.kashcore.org"));
+        vSeeds.push_back(CDNSSeedData("node10.kaskcore.org", "node10.kashcore.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,45);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,66);
