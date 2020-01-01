@@ -59,7 +59,7 @@
         <file alias="network_disabled">res/icons/network_disabled.png</file>
     </qresource>
     <qresource prefix="/css">
-        <file alias="trad">res/css/trad.css</file>
+        <file alias="light">res/css/light.css</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
