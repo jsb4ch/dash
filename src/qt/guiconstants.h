@@ -52,7 +52,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Kash"
-#define QAPP_ORG_DOMAIN "kash.org"
+#define QAPP_ORG_DOMAIN "kashcore.org"
 #define QAPP_APP_NAME_DEFAULT "Kash-Qt"
 #define QAPP_APP_NAME_TESTNET "Kash-Qt-testnet"
 #define QAPP_APP_NAME_DEVNET "Kash-Qt-%s"

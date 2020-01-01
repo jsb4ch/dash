@@ -3,7 +3,7 @@ Kash Core version 0.12.3.1
 
 Release is now available from:
 
-  <https://www.kash.org/downloads/#wallets>
+  <https://www.kashcore.org/downloads/#wallets>
 
 This is a new major version release, bringing new features, various bugfixes and other
 improvements.
@@ -199,7 +199,7 @@ You can read more about all changes in Bitcoin Core 0.13 and 0.14 in following d
 - [release-notes-0.14.2.md](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.14.2.md).
 
 Note that some features were already backported earlier (per-UTXO fix, -assumevalid, GUI overlay etc.) and some were not backported at all
-(SegWit and feefilter, you can read more about why we did so [here](https://blog.kash.org/segwit-lighting-rbf-in-kash-9536868ca861) and [here](https://github.com/kashpay/kash/pull/2025)).
+(SegWit and feefilter, you can read more about why we did so [here](https://blog.kashcore.org/segwit-lighting-rbf-in-kash-9536868ca861) and [here](https://github.com/kashpay/kash/pull/2025)).
 The alert system was also kept in place for now. We are going to continue backporting the most notable fixes and improvements from Bitcoin Core versions 0.15 and 0.16 in future releases.
 
 A lot of refactoring, code cleanups and other small fixes were done in this release again. We are going to continue making code more reliable and easier to review in future releases as well.

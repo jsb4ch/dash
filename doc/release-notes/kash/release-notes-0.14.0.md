@@ -3,7 +3,7 @@ Kash Core version 0.14.0.0
 
 Release is now available from:
 
-  <https://www.kash.org/downloads/#wallets>
+  <https://www.kashcore.org/downloads/#wallets>
 
 This is a new major version release, bringing new features, various bugfixes and other improvements.
 

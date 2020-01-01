@@ -645,7 +645,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/kashpay/kash>";
-    const std::string URL_WEBSITE = "<https://kash.org>";
+    const std::string URL_WEBSITE = "<https://kashcore.org>";
 
     return CopyrightHolders(_("Copyright (C)"), 2014, COPYRIGHT_YEAR) + "\n" +
            "\n" +

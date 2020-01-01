@@ -3,7 +3,7 @@ Kash Core version 0.13.0.0
 
 Release is now available from:
 
-  <https://www.kash.org/downloads/#wallets>
+  <https://www.kashcore.org/downloads/#wallets>
 
 This is a new major version release, bringing new features, various bugfixes and other improvements.
 
@@ -95,7 +95,7 @@ The new system is going to be activated via combination of a BIP9-like deploymen
 (`SPORK_15_DETERMINISTIC_MNS_ENABLED`).
 
 Read more: https://github.com/kashpay/dips/blob/master/dip-0003.md
-Upgrade instructions: https://docs.kash.org/DIP3-masternode-upgrade
+Upgrade instructions: https://docs.kashcore.org/DIP3-masternode-upgrade
 
 DIP0004 - Simplified Verification of Deterministic Masternode Lists
 -------------------------------------------------------------------

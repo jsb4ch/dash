@@ -1,7 +1,7 @@
 Kash Core 0.14.0
 =====================
 
-This is the official reference wallet for Kash digital currency and comprises the backbone of the Kash peer-to-peer network. You can [download Kash Core](https://www.kash.org/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Kash digital currency and comprises the backbone of the Kash peer-to-peer network. You can [download Kash Core](https://www.kashcore.org/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
@@ -24,12 +24,12 @@ Drag Kash-Qt to your applications folder, and then run Kash-Qt.
 
 ### Need Help?
 
-* See the [Kash documentation](https://docs.kash.org)
+* See the [Kash documentation](https://docs.kashcore.org)
 for help and more information.
 * See the [Kash Developer Documentation](https://kash-docs.github.io/) 
 for technical specifications and implementation details.
 * Ask for help on [Kash Nation Discord](http://kashchat.org)
-* Ask for help on the [Kash Forum](https://kash.org/forum)
+* Ask for help on the [Kash Forum](https://kashcore.org/forum)
 
 Building
 ---------------------
@@ -59,7 +59,7 @@ The Kash Core repo's [root README](/README.md) contains relevant information on 
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [Kash Forum](https://kash.org/forum), in the Development & Technical Discussion board.
+* Discuss on the [Kash Forum](https://kashcore.org/forum), in the Development & Technical Discussion board.
 * Discuss on [Kash Nation Discord](http://kashchat.org)
 
 ### Miscellaneous

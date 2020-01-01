@@ -3,7 +3,7 @@ Kash Core staging tree 0.14.0
 
 `master:` [![Build Status](https://travis-ci.org/kashpay/kash.svg?branch=master)](https://travis-ci.org/kashpay/kash) `develop:` [![Build Status](https://travis-ci.org/kashpay/kash.svg?branch=develop)](https://travis-ci.org/kashpay/kash/branches)
 
-https://www.kash.org
+https://www.kashcore.org
 
 
 What is Kash?
@@ -16,7 +16,7 @@ are carried out collectively by the network. Kash Core is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Kash Core software, see https://www.kash.org/get-kash/.
+the Kash Core software, see https://www.kashcore.org/get-kash/.
 
 
 License
@@ -74,4 +74,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 
-Translators should also follow the [forum](https://www.kash.org/forum/topic/kash-worldwide-collaboration.88/).
+Translators should also follow the [forum](https://www.kashcore.org/forum/topic/kash-worldwide-collaboration.88/).

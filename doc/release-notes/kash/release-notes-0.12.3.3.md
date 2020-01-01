@@ -3,7 +3,7 @@ Kash Core version 0.12.3.3
 
 Release is now available from:
 
-  <https://www.kash.org/downloads/#wallets>
+  <https://www.kashcore.org/downloads/#wallets>
 
 This is a critical bugfix release.
 
