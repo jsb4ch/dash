@@ -58,7 +58,7 @@ WalletFrame {
     }
     
     QToolBar > QToolButton:checked {
-    background-color:#1c75bc;
+    background-color:#7c7007;
     color:#fff;
     font-weight:bold;
     }
@@ -142,7 +142,7 @@ WalletFrame {
     }
     
     QComboBox:editable {
-    background: #1c75bc;
+    background: #7c7007;
     color:#616161;
     border:0px solid transparent;
     }
@@ -278,7 +278,7 @@ WalletFrame {
     
     QHeaderView::section { /* Table Header Sections */
     qproperty-alignment:center;
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #1070B0, stop: 1 #1c75bc);
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #1070B0, stop: 1 #7c7007);
     color:#fff;
     min-height:25px;
     font-weight:bold;
@@ -716,7 +716,7 @@ WalletFrame {
     }
     
     QDialog#RPCConsole QWidget#tab_peers  QLabel#peerHeading { /* Peers Info Header */
-    color:#1c75bc;
+    color:#7c7007;
     }
     
     QDialog#RPCConsole QPushButton#openDebugLogfileButton {
@@ -826,7 +826,7 @@ WalletFrame {
     QWidget .QFrame#frame .QLabel#labelBalanceText { /* Available Balance Label */
     qproperty-alignment: 'AlignVCenter | AlignRight';
     min-width:160px;
-    background-color:#1c75bc;
+    background-color:#7c7007;
     color:#ffffff;
     margin-right:5px;
     padding-right:5px;
@@ -838,7 +838,7 @@ WalletFrame {
     QWidget .QFrame#frame .QLabel#labelBalance { /* Available Balance */
     qproperty-alignment: 'AlignVCenter | AlignLeft';
     font-size:16px;
-    color:#1c75bc;
+    color:#7c7007;
     margin-left:0px;
         font-weight: bold;
     }
@@ -930,7 +930,7 @@ WalletFrame {
     qproperty-alignment: 'AlignVCenter | AlignCenter';
     max-width: 421px;
     min-width: 421px;
-    background-color:#1c75bc;
+    background-color:#7c7007;
     color:#fff;
     margin-right: 5px;
     padding-right: 5px;
@@ -987,7 +987,7 @@ WalletFrame {
     }
     
     QWidget .QFrame#framePrivateSend #privateSendFormLayoutWidget .QProgressBar#privateSendProgress::chunk {
-    background-color: #1c75bc;
+    background-color: #7c7007;
     width:1px;
     }
     
