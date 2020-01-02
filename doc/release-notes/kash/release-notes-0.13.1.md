@@ -9,7 +9,7 @@ This is a new minor version release, bringing various bugfixes and other improve
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/kashpay/kash/issues>
+  <https://github.com/jsb4ch/kash/issues>
 
 
 Upgrading and downgrading
@@ -73,25 +73,25 @@ in some rare cases otherwise);
  0.13.1.0 Change log
 ===================
 
-See detailed [set of changes](https://github.com/kashpay/kash/compare/v0.13.0.0...kashpay:v0.13.1.0).
+See detailed [set of changes](https://github.com/jsb4ch/kash/compare/v0.13.0.0...jsb4ch:v0.13.1.0).
 
 ### Backports
 
-- [`da5a861c0`](https://github.com/kashpay/kash/commit/da5a861c0) Change the way invalid ProTxes are handled in `addUnchecked` and `existsProviderTxConflict` (#2691)
-- [`6ada90c11`](https://github.com/kashpay/kash/commit/6ada90c11) Call existsProviderTxConflict after CheckSpecialTx (#2690)
-- [`23eb70cb7`](https://github.com/kashpay/kash/commit/23eb70cb7) Add getspecialtxes rpc (#2668)
-- [`023f8a01a`](https://github.com/kashpay/kash/commit/023f8a01a) Fix bench log for payee and special txes (#2678)
-- [`8961a6acc`](https://github.com/kashpay/kash/commit/8961a6acc) Stop checking MN protocol version before signalling DIP3 (#2684)
-- [`e18916386`](https://github.com/kashpay/kash/commit/e18916386) Add missing help text for `operatorPayoutAddress` (#2679)
-- [`0d8cc0761`](https://github.com/kashpay/kash/commit/0d8cc0761) Invoke CheckSpecialTx after all normal TX checks have passed (#2673)
-- [`592210daf`](https://github.com/kashpay/kash/commit/592210daf) Bump block stats when adding commitment tx into block (#2654)
-- [`070ad103f`](https://github.com/kashpay/kash/commit/070ad103f) Wait for script checks to finish before messing with txes in Kash-specific way (#2652)
-- [`3a3586d5a`](https://github.com/kashpay/kash/commit/3a3586d5a) Use helper function to produce help text for params of `protx` rpcs (#2649)
-- [`332e0361c`](https://github.com/kashpay/kash/commit/332e0361c) Add checkbox to show only masternodes the wallet has keys for (#2627)
+- [`da5a861c0`](https://github.com/jsb4ch/kash/commit/da5a861c0) Change the way invalid ProTxes are handled in `addUnchecked` and `existsProviderTxConflict` (#2691)
+- [`6ada90c11`](https://github.com/jsb4ch/kash/commit/6ada90c11) Call existsProviderTxConflict after CheckSpecialTx (#2690)
+- [`23eb70cb7`](https://github.com/jsb4ch/kash/commit/23eb70cb7) Add getspecialtxes rpc (#2668)
+- [`023f8a01a`](https://github.com/jsb4ch/kash/commit/023f8a01a) Fix bench log for payee and special txes (#2678)
+- [`8961a6acc`](https://github.com/jsb4ch/kash/commit/8961a6acc) Stop checking MN protocol version before signalling DIP3 (#2684)
+- [`e18916386`](https://github.com/jsb4ch/kash/commit/e18916386) Add missing help text for `operatorPayoutAddress` (#2679)
+- [`0d8cc0761`](https://github.com/jsb4ch/kash/commit/0d8cc0761) Invoke CheckSpecialTx after all normal TX checks have passed (#2673)
+- [`592210daf`](https://github.com/jsb4ch/kash/commit/592210daf) Bump block stats when adding commitment tx into block (#2654)
+- [`070ad103f`](https://github.com/jsb4ch/kash/commit/070ad103f) Wait for script checks to finish before messing with txes in Kash-specific way (#2652)
+- [`3a3586d5a`](https://github.com/jsb4ch/kash/commit/3a3586d5a) Use helper function to produce help text for params of `protx` rpcs (#2649)
+- [`332e0361c`](https://github.com/jsb4ch/kash/commit/332e0361c) Add checkbox to show only masternodes the wallet has keys for (#2627)
 
 ### Other
 
-- [`bd0de4876`](https://github.com/kashpay/kash/commit/bd0de4876) Bump version to 0.13.1 (#2686)
+- [`bd0de4876`](https://github.com/jsb4ch/kash/commit/bd0de4876) Bump version to 0.13.1 (#2686)
 
 Credits
 =======
@@ -126,19 +126,19 @@ Kash Core tree 0.12.1.x was a fork of Bitcoin Core tree 0.12.
 
 These release are considered obsolete. Old release notes can be found here:
 
-- [v0.13.0](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.13.0.md) released Jan/14/2019
-- [v0.12.3.4](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.4.md) released Dec/14/2018
-- [v0.12.3.3](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.3.md) released Sep/19/2018
-- [v0.12.3.2](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.2.md) released Jul/09/2018
-- [v0.12.3.1](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.1.md) released Jul/03/2018
-- [v0.12.2.3](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.2.3.md) released Jan/12/2018
-- [v0.12.2.2](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.2.2.md) released Dec/17/2017
-- [v0.12.2](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.2.md) released Nov/08/2017
-- [v0.12.1](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.1.md) released Feb/06/2017
-- [v0.12.0](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.12.0.md) released Aug/15/2015
-- [v0.11.2](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.11.2.md) released Mar/04/2015
-- [v0.11.1](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.11.1.md) released Feb/10/2015
-- [v0.11.0](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.11.0.md) released Jan/15/2015
-- [v0.10.x](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.10.0.md) released Sep/25/2014
-- [v0.9.x](https://github.com/kashpay/kash/blob/master/doc/release-notes/kash/release-notes-0.9.0.md) released Mar/13/2014
+- [v0.13.0](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.13.0.md) released Jan/14/2019
+- [v0.12.3.4](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.4.md) released Dec/14/2018
+- [v0.12.3.3](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.3.md) released Sep/19/2018
+- [v0.12.3.2](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.2.md) released Jul/09/2018
+- [v0.12.3.1](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.3.1.md) released Jul/03/2018
+- [v0.12.2.3](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.2.3.md) released Jan/12/2018
+- [v0.12.2.2](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.2.2.md) released Dec/17/2017
+- [v0.12.2](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.2.md) released Nov/08/2017
+- [v0.12.1](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.1.md) released Feb/06/2017
+- [v0.12.0](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.12.0.md) released Aug/15/2015
+- [v0.11.2](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.11.2.md) released Mar/04/2015
+- [v0.11.1](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.11.1.md) released Feb/10/2015
+- [v0.11.0](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.11.0.md) released Jan/15/2015
+- [v0.10.x](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.10.0.md) released Sep/25/2014
+- [v0.9.x](https://github.com/jsb4ch/kash/blob/master/doc/release-notes/kash/release-notes-0.9.0.md) released Mar/13/2014
 

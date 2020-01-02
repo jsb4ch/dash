@@ -4,11 +4,11 @@
 
 Kash Core version 0.12.0 is now available from:
 
-  https://kashpay.io/downloads
+  https://jsb4ch.io/downloads
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/kashpay/kash/issues
+  https://github.com/jsb4ch/kash/issues
 
 
 How to Upgrade

@@ -43,7 +43,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.kash.KashPayment</string>
+      <string>org.kash.jsb4chment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>kash</string>
@@ -68,7 +68,7 @@
         <string>application/x-kash-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>kashpaymentrequest</string>
+          <string>jsb4chmentrequest</string>
         </array>
       </dict>
     </dict>

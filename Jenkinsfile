@@ -49,20 +49,20 @@ for(int i = 0; i < targets.size(); i++) {
           // restore cache
           def hasCache = false
           try {
-            copyArtifacts(projectName: "kashpay-kash/${BRANCH_NAME}", optional: true, selector: lastSuccessful(), filter: "ci-cache-${target}.tar.gz")
+            copyArtifacts(projectName: "jsb4ch-kash/${BRANCH_NAME}", optional: true, selector: lastSuccessful(), filter: "ci-cache-${target}.tar.gz")
           } catch (Exception e) {
           }
           if (fileExists("ci-cache-${target}.tar.gz")) {
             hasCache = true
-            echo "Using cache from kashpay-kash/${BRANCH_NAME}"
+            echo "Using cache from jsb4ch-kash/${BRANCH_NAME}"
           } else {
             try {
-              copyArtifacts(projectName: 'kashpay-kash/develop', optional: true, selector: lastSuccessful(), filter: "ci-cache-${target}.tar.gz");
+              copyArtifacts(projectName: 'jsb4ch-kash/develop', optional: true, selector: lastSuccessful(), filter: "ci-cache-${target}.tar.gz");
             } catch (Exception e) {
             }
             if (fileExists("ci-cache-${target}.tar.gz")) {
               hasCache = true
-              echo "Using cache from kashpay-kash/develop"
+              echo "Using cache from jsb4ch-kash/develop"
             }
           }
 
