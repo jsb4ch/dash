@@ -286,10 +286,10 @@ public:
         nDefaultPort = 23999;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1577975420, 18265391, 0x1e0ffff0, 1, 500 * COIN);
+        genesis = CreateGenesisBlock(1577979692, 19061661, 0x1e0ffff0, 1, 500 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000002e888aff0ec56e3b88d7865617583b455028fd380a80c4c4965bc8a4992"));
-        assert(genesis.hashMerkleRoot == uint256S("0xfe70f4a23756e0d7d598289a37583dd41e94d764d1bda4287423a80cdb5fa8f7"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000067bda6fd5337049a9af94d215325ead5e77e49e2d76b6c4e6f0d546e403"));
+        assert(genesis.hashMerkleRoot == uint256S("0x9542a120e70dd26269e0ddbb3d3660d09776ec6e6e63ca00662b9b0a7add4d12"));
 
         vSeeds.push_back(CDNSSeedData("kashseed.kaskcore.org", "kashseed.kashcore.org"));
         vSeeds.push_back(CDNSSeedData("node.kaskcore.org", "node.kashcore.org"));
